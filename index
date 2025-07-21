@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SEMINAR</title>
+</head>
+<body>
+     <nav>
+     	<ul>
+     		<li>HOME</li>
+     		<li>ABOUT</li>
+     		<li>CONTACT</li>
+     	</ul>
+     </nav>
+     <section id="HOME">
+     	I am Stecy a web developer.
+     </section>
+     <section id="ABOUT">
+     		Graduated from Mindanao State University    	
+     </section>
+     <section  id="CONTACT">
+     	<p> Contact me 123456789<p/>   	
+     </section>
+</body>
+</html>
