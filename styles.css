@@ -1,0 +1,32 @@
+/* styles.css */
+#home {
+  height: 100vh;
+  background-image: url('img/background.jpg.jfif');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Add this pseudo-element overlay for depth & contrast */
+#home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3)
+  );
+  /* Adjust opacity and color for different vibes */
+}
+
+/* Ensure content appears above overlay */
+#home .overlay {
+  position: relative;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
