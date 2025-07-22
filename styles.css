@@ -1,32 +1,62 @@
-/* styles.css */
+/* Global Styles */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation */
+header {
+  background: rgba(255,255,255,0.8);
+  position: fixed; width: 100%; top: 0;
+  z-index: 10;
+}
+nav ul {
+  display: flex; justify-content: center; padding: 1rem;
+  list-style: none;
+}
+nav li + li { margin-left: 2rem; }
+nav a {
+  text-decoration: none; color: #333;
+  font-weight: 500;
+  transition: color .3s;
+}
+nav a:hover { color: #555; }
+
+/* Hero Section */
 #home {
   height: 100vh;
-  background-image: url('img/background3.jpg');
-  background-size: cover;
-  background-position: center;
+  background: url('images/background3.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
   position: relative;
 }
-
-/* Add this pseudo-element overlay for depth & contrast */
 #home::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.3), 
-    rgba(0, 0, 0, 0.3)
-  );
-  /* Adjust opacity and color for different vibes */
+  background: rgba(255,255,255,0.3);
+  /* creates a soft bleach-over effect */
 }
-
-/* Ensure content appears above overlay */
 #home .overlay {
   position: relative;
-  padding: 40px;
-  border-radius: 10px;
+  background: rgba(255,255,255,0.6);
+  padding: 2rem 3rem;
+  border-radius: 8px;
   text-align: center;
+}
+#home h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+#home p {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #home h1 { font-size: 2.2rem; }
+  #home .overlay { padding: 1.5rem 2rem; }
 }
